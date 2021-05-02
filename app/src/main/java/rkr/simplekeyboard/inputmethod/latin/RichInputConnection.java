@@ -546,6 +546,8 @@ public final class RichInputConnection {
             }
         }
         reloadTextCache();
+        mIC.setComposingRegion(start, end);
+        mIC.finishComposingText();
     }
 
     public int getExpectedSelectionStart() {
