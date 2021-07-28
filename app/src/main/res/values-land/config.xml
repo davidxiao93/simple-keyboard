@@ -37,7 +37,7 @@
     <fraction name="config_keyboard_bottom_padding">0.0%p</fraction>
     <fraction name="config_keyboard_left_padding">0.510%p</fraction>
     <fraction name="config_keyboard_right_padding">0.510%p</fraction>
-    <fraction name="config_key_vertical_gap">5.368%p</fraction>
+    <fraction name="config_key_vertical_gap">2.568%p</fraction>
     <fraction name="config_key_horizontal_gap">1.020%p</fraction>
     <!-- config_more_keys_keyboard_key_height x -0.5 -->
     <dimen name="config_more_keys_keyboard_vertical_correction">-22.4dp</dimen>
