@@ -16,6 +16,9 @@
 
 package rkr.simplekeyboard.inputmethod.keyboard;
 
+import static android.content.res.Configuration.ORIENTATION_LANDSCAPE;
+import static android.content.res.Configuration.ORIENTATION_PORTRAIT;
+
 import android.content.Context;
 import android.content.res.Resources;
 import android.util.Log;
@@ -142,6 +145,13 @@ public final class KeyboardSwitcher implements KeyboardState.SwitchActions {
         final MainKeyboardView keyboardView = mKeyboardView;
         final Keyboard oldKeyboard = keyboardView.getKeyboard();
         final Keyboard newKeyboard = mKeyboardLayoutSet.getKeyboard(keyboardId);
+
+        if (currentSettingsValues.mDisplayOrientation == ORIENTATION_LANDSCAPE) {
+            keyboardView.setPadding(0,0,0,0);
+        } else if (currentSettingsValues.mDisplayOrientation == ORIENTATION_PORTRAIT) {
+            keyboardView.setPadding(0,0,0,100);
+        }
+
         keyboardView.setKeyboard(newKeyboard);
         keyboardView.setKeyPreviewPopupEnabled(
                 currentSettingsValues.mKeyPreviewPopupOn,
