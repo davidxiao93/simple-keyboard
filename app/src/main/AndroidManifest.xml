@@ -29,7 +29,8 @@
             android:name=".latin.LatinIME"
             android:label="@string/english_ime_name"
             android:directBootAware="true"
-            android:permission="android.permission.BIND_INPUT_METHOD">
+            android:permission="android.permission.BIND_INPUT_METHOD"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.view.InputMethod" />
             </intent-filter>
@@ -42,13 +43,14 @@
         <activity
             android:name=".latin.settings.SettingsActivity"
             android:label="@string/english_ime_name"
-            android:theme="@style/platformSettingsTheme">
+            android:theme="@style/platformSettingsTheme"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity> <!-- Broadcast receivers -->
-        <receiver android:name=".latin.SystemBroadcastReceiver">
+        <receiver android:name=".latin.SystemBroadcastReceiver" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.LOCALE_CHANGED" />
             </intent-filter>
